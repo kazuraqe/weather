@@ -1,0 +1,148 @@
+@font-face {
+    font-family: 'Montserrat', sans-serif;
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
+}
+
+:root {
+    --text-color: #d5d5d5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../png/background.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+.menu {
+    height: 500px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 16px;
+    background: rgb(48, 48, 48);
+    z-index: 1;
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.search {
+    height: 48px;
+    width: 100%;
+    background: #1e1e1e;
+    border: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 50px;
+}
+
+.search:focus {
+    outline: none;
+}
+
+.bx-search {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.bx-search::before {
+    content: '';
+}
+
+.weather {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.weather__data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather__city-box {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.weather__city {
+    font-weight: 600;
+}
+
+.weather__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather__temp {
+    font-weight: 200;
+    font-size: 32px;
+}
+
+.weather__description {
+    text-align: end;
+}
+
+.weather__advanced-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather__humidity-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather__humidity-indicator {
+    font-weight: 600;
+}
+
+.weather__wind-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.weather__wind-indicator {
+    font-weight: 600;
+}
